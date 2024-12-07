@@ -1,4 +1,3 @@
-import React from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '../ui/tabs';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -18,8 +17,8 @@ const journey = [
 	{
 		type: 'experience',
 		company: 'UpWork',
-		logoUrl: '/assets/journey/experience/logo-1.svg',
-		position: 'Web Developer',
+		logoUrl: '/assets/journey/experience/upwork-logo.svg',
+		position: 'Web Developer (Freelancer)',
 		duration: 'Jul 2021 - Present',
 		description:
 			'Built websites and web apps using Next.js, Tailwind, and Typescript. Worked on Scaleble, user-friendly solutions.',
@@ -27,7 +26,7 @@ const journey = [
 	{
 		type: 'experience',
 		company: 'Orange',
-		logoUrl: '/assets/journey/experience/logo-2.svg',
+		logoUrl: '/assets/journey/experience/orange-logo.svg',
 		position: 'Full Stack Developer',
 		duration: 'Mar 2019 - Jun 2021',
 		description:
@@ -35,8 +34,8 @@ const journey = [
 	},
 	{
 		type: 'experience',
-		company: 'Arabia Inc',
-		logoUrl: '/assets/journey/experience/logo-3.svg',
+		company: 'Orange',
+		logoUrl: '/assets/journey/experience/orange-logo.svg',
 		position: 'Frontend Developer',
 		duration: 'Aug 2015 - Dec 2016',
 		description:
@@ -46,7 +45,7 @@ const journey = [
 	{
 		type: 'education',
 		institution: 'Udemy',
-		logoUrl: '/assets/journey/education/logo-1.svg',
+		logoUrl: '/assets/journey/education/logo-2.svg',
 		qualification: 'Web Development Bootcamp',
 		duration: 'Jan 2020 - Apr 2020',
 		description:
@@ -64,7 +63,7 @@ const journey = [
 	{
 		type: 'education',
 		institution: 'Udemy',
-		logoUrl: '/assets/journey/education/logo-1.svg',
+		logoUrl: '/assets/journey/education/logo-2.svg',
 		qualification: 'Web Development Bootcamp',
 		duration: 'Jan 2020 - Apr 2020',
 		description:
@@ -73,7 +72,7 @@ const journey = [
 	{
 		type: 'education',
 		institution: 'Udemy',
-		logoUrl: '/assets/journey/education/logo-1.svg',
+		logoUrl: '/assets/journey/education/logo-2.svg',
 		qualification: 'Web Development Bootcamp',
 		duration: 'Jan 2020 - Apr 2020',
 		description:

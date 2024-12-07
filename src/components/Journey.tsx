@@ -10,7 +10,7 @@ const Journey = () => {
 			<div className="container mx-auto">
 				<AnimatedText
 					text="My Professional Journey"
-					textStyle="h2 mb-3 text-center"
+					textStyle="h2 mb-[30px] text-center"
 				/>
 				<Cards />
 			</div>

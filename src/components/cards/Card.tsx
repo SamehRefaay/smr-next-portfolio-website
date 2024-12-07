@@ -1,7 +1,5 @@
-import { div } from 'framer-motion/client';
 import Image from 'next/image';
 import { ReactNode } from 'react';
-import { IconType } from 'react-icons';
 
 interface Props {
 	key: number;
@@ -18,7 +16,6 @@ interface Props {
 }
 
 const Card = ({
-	key,
 	type,
 	company,
 	logoUrl,
@@ -50,23 +47,39 @@ const Card = ({
 									: duration}
 							</h3>
 						</div>
-						{duration && <p className="text-base">{duration}</p>}
+						<p className="text-base">
+							{type !== 'experience' && type !== 'education' ? null : duration}
+						</p>
 					</div>
-					<div></div>
-				</div>
-				<div className="flex flex-1 justify-center xl:justify-start items-center md:py-8 md:px-16">
-					<div>
-						{type === 'skill' ? (
-							//render icon of skill
-							<div>{icon}</div>
-						) : (
-							//render logo for experience and education
-							<div className="relative w-[300px] h-[38px] xl:h-[44px]">
-								{logoUrl && (
-									<Image src={logoUrl} alt="" fill className="object-contain" />
-								)}
+					<div className="flex flex-1 justify-center xl:justify-start items-center md:py-8 md:px-16">
+						<div className="flex flex-col xl:flex-row gap-4 xl:gap-10 justify-center xl:justify-start items-center text-center xl:text-start px-4 xl:px-0">
+							{type === 'skill' ? (
+								<div className="w-max h-full xl:w-[300px] relative flex justify-center items-center">
+									<div className="text-5xl text-primary/90">{icon}</div>
+								</div>
+							) : (
+								<div className="relative w-[300px] h-[70px] xl:h-[90px]">
+									{logoUrl && (
+										<Image
+											src={logoUrl}
+											alt=""
+											fill
+											className="object-contain"
+										/>
+									)}
+								</div>
+							)}
+							<div className="w-full xl:border-l xl:border-secondary/10 xl:px-12">
+								<h3 className="hidden xl:flex h3 mb-2 xl:mb-4">
+									{type === 'experience'
+										? company
+										: type === 'education'
+										? institution
+										: name}
+								</h3>
+								<p className="max-w-[660px] text-base">{description}</p>
 							</div>
-						)}
+						</div>
 					</div>
 				</div>
 			</div>
