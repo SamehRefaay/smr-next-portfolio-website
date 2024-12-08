@@ -2,12 +2,13 @@
 import { useEffect } from 'react';
 // components
 import Hero from '@/components/Hero';
+import FixedMenu from '@/components/FixedMenu';
 import Services from '@/components/Services';
 import About from '@/components/About';
 import Journey from '@/components/Journey';
+import Testimonials from '@/components/Testimonials';
 import Work from '@/components/work/Work';
 import Contact from '@/components/Contact';
-import FixedMenu from '@/components/FixedMenu';
 
 const Home = () => {
 	// implement locomotive scroll
@@ -27,6 +28,7 @@ const Home = () => {
 			<About />
 			<Journey />
 			<Work />
+			<Testimonials />
 			<Contact />
 			{/* temperory section */}
 			<section className="h-[3000px]">temp</section>
