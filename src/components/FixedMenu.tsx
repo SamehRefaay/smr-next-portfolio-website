@@ -54,7 +54,7 @@ const FixedMenu = () => {
 						transition={{ duration: 0.3 }}
 						className="relative w-full max-w-md md:max-w-none h-400 bottom-[32rem] xl:bottom-[34rem] px-4 pointer-events-auto"
 					>
-						<div className="w-full h-full max-w-[1170px] mx-auto py-12 xl:py-12 px-12  xl:px-32 bg-white flex gap-12 items-center rounded-lg">
+						<div className="w-full h-full bg-white shadow-custom max-w-[1170px] mx-auto py-12 xl:py-12 px-12 xl:px-32 flex gap-12 items-center rounded-lg">
 							{/* nav */}
 							<Nav
 								containerStyles="w-full md:border-r border-secondary/20 md:pr-12 md:w-auto text-center md:text-left"
