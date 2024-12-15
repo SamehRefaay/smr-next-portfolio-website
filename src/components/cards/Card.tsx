@@ -69,7 +69,7 @@ const Card = ({
 									<div className="text-5xl text-primary/90">{icon}</div>
 								</div>
 							) : (
-								<div className="relative w-[300px] h-[70px] xl:h-[90px]">
+								<div className="relative w-[280px] h-[80px] xl:h-[90px]">
 									{logoUrl && (
 										<Image
 											src={logoUrl}
@@ -104,7 +104,7 @@ const Card = ({
 											<Link
 												href={certUrl}
 												target="_blank"
-												className="border rounded-full w-max py-2 px-4 flex gap-1 items-center justify-center"
+												className="border rounded-full w-max py-2 px-4 flex gap-1 items-center justify-center hover:bg-accent-hover hover:text-white"
 											>
 												<span>Show Certification</span>
 												<span>
@@ -114,7 +114,11 @@ const Card = ({
 										)}
 									</div>
 								) : (
-									<p className="max-w-[660px] text-base">{description}</p>
+									<p className="max-w-[660px] text-base">
+										{description && description.length > 380
+											? `${description.substring(0, 380)}...`
+											: description}
+									</p>
 								)}
 							</div>
 						</div>
