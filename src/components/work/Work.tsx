@@ -14,47 +14,47 @@ export interface workData {
 
 const data: workData[] = [
 	{
-		href: '',
+		href: 'https://filmpire-samehrefaay.netlify.app/',
 		category: 'frontend',
-		img: '/assets/work/thumb-1.png',
-		title: 'Project one',
+		img: '/assets/work/thumb-01.png',
+		title: 'Filmpire',
 	},
 	{
-		href: '',
+		href: 'https://admin-dashboard-samehrefaay.netlify.app/',
 		category: 'frontend',
-		img: '/assets/work/thumb-2.png',
-		title: 'Project two',
+		img: '/assets/work/thumb-02.png',
+		title: 'Admin Dashboard',
 	},
+	// {
+	// 	href: '',
+	// 	category: 'frontend',
+	// 	img: '/assets/work/thumb-3.png',
+	// 	title: 'Project three',
+	// },
 	{
-		href: '',
-		category: 'frontend',
-		img: '/assets/work/thumb-3.png',
-		title: 'Project three',
-	},
-	{
-		href: '',
+		href: 'https://shopescap-e-commerce-website.vercel.app/',
 		category: 'fullstack',
-		img: '/assets/work/thumb-4.png',
-		title: 'Project four',
+		img: '/assets/work/thumb-03.png',
+		title: 'Shopescape',
 	},
 	{
-		href: '',
+		href: 'https://sr-real-state-og8zpnidk-samehrefaays-projects.vercel.app/',
 		category: 'fullstack',
-		img: '/assets/work/thumb-5.png',
-		title: 'Project five',
+		img: '/assets/work/thumb-04.png',
+		title: 'SRG Real State',
 	},
 	{
-		href: '',
+		href: 'https://smr-promptopia-p6jf0b2z9-samehrefaays-projects.vercel.app/',
 		category: 'fullstack',
-		img: '/assets/work/thumb-6.png',
-		title: 'Project six',
+		img: '/assets/work/thumb-05.png',
+		title: 'Promptopia',
 	},
-	{
-		href: '',
-		category: 'fullstack',
-		img: '/assets/work/thumb-7.png',
-		title: 'Project seven',
-	},
+	// {
+	// 	href: '',
+	// 	category: 'fullstack',
+	// 	img: '/assets/work/thumb-7.png',
+	// 	title: 'Project seven',
+	// },
 ];
 
 const Work = () => {
@@ -83,7 +83,7 @@ const Work = () => {
 				<Tabs defaultValue="all" className="w-full flex flex-col">
 					<div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between">
 						<AnimatedText text="My Latest Work" textStyle="h2 mb-[30px]" />
-						<TabsList className="max-w-max h-full mb-[30px] ">
+						<TabsList className="max-w-max h-full mb-[30px] flex flex-col md:flex-row ">
 							{tabData.map((item, index) => (
 								<TabsTrigger
 									key={index}

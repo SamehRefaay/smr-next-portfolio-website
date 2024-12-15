@@ -1,5 +1,8 @@
+import { div } from 'framer-motion/client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { ReactNode } from 'react';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 interface Props {
 	key: number;
@@ -7,11 +10,13 @@ interface Props {
 	company?: string;
 	logoUrl?: string;
 	position?: string;
-	description: string;
+	description?: string;
 	duration?: string;
 	institution?: string;
 	qualification?: string;
 	name?: string;
+	certId?: string;
+	certUrl?: string;
 	icon?: ReactNode;
 }
 
@@ -26,6 +31,8 @@ const Card = ({
 	qualification,
 	name,
 	icon,
+	certId,
+	certUrl,
 }: Props) => {
 	return (
 		<div className="w-full h-[300px] flex items-center top-12 sticky overflow-hidden">
@@ -42,13 +49,17 @@ const Card = ({
 							<h3 className="text-lg text-primary font-semibold">
 								{type === 'experience'
 									? position
-									: type === 'education'
+									: type === 'education' || type === 'certification'
 									? qualification
 									: duration}
 							</h3>
 						</div>
 						<p className="text-base">
-							{type !== 'experience' && type !== 'education' ? null : duration}
+							{type !== 'experience' &&
+							type !== 'education' &&
+							type !== 'certification'
+								? null
+								: duration}
 						</p>
 					</div>
 					<div className="flex flex-1 justify-center xl:justify-start items-center md:py-8 md:px-16">
@@ -73,11 +84,38 @@ const Card = ({
 								<h3 className="hidden xl:flex h3 mb-2 xl:mb-4">
 									{type === 'experience'
 										? company
-										: type === 'education'
+										: type === 'education' || type === 'certification'
 										? institution
 										: name}
 								</h3>
-								<p className="max-w-[660px] text-base">{description}</p>
+								{type === 'certification' ? (
+									<div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center">
+										<p>
+											<span className="text-base font-medium">Issued:</span>{' '}
+											<span>{duration}</span>
+										</p>
+										<p>
+											<span className="text-base font-medium">
+												Credential ID:
+											</span>{' '}
+											<span>{certId}</span>
+										</p>
+										{certUrl && (
+											<Link
+												href={certUrl}
+												target="_blank"
+												className="border rounded-full w-max py-2 px-4 flex gap-1 items-center justify-center"
+											>
+												<span>Show Certification</span>
+												<span>
+													<FaExternalLinkAlt />
+												</span>
+											</Link>
+										)}
+									</div>
+								) : (
+									<p className="max-w-[660px] text-base">{description}</p>
+								)}
 							</div>
 						</div>
 					</div>

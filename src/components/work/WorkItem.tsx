@@ -6,7 +6,7 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const WorkItem = ({ href, category, img, title }: workData) => {
 	return (
-		<Link href={href} className="group">
+		<Link href={href} target="_blank" className="group">
 			<div className="relative overflow-hidden w-full h-[300px] mb-6 p-8 rounded-[30px] flex justify-center items-center bg-[#f4f4f4]">
 				<Badge className="bg-primary text-base absolute top-6 left-6 capitalize z-40">
 					{category}

@@ -9,6 +9,7 @@ import Journey from '@/components/Journey';
 import Testimonials from '@/components/Testimonials';
 import Work from '@/components/work/Work';
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 const Home = () => {
 	// implement locomotive scroll
@@ -30,8 +31,7 @@ const Home = () => {
 			<Work />
 			<Testimonials />
 			<Contact />
-			{/* temperory section */}
-			<section className="h-[3000px]">temp</section>
+			<Footer />
 		</div>
 	);
 };

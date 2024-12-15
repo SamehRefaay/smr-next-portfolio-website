@@ -68,31 +68,19 @@ const Testimonials = () => {
 	}, [swiperRef]);
 
 	return (
-		<div className="p-24 overflow-hidden">
+		<div className="w-full py-24 overflow-hidden">
 			<div className="container mx-auto">
 				<AnimatedText
 					text="What Clients Say"
 					textStyle="h2 mb-[30px] xl:mb-[60px] text-center"
 				/>
 				<div className="flex flex-col lg:flex-row gap-12">
-					{/* slider info in large screen */}
-					{/* <div className="hidden xl:flex absolute right-0 top-0 w-full md:w-1/2 xl:w-3/4 ml-auto h-max">
-						<div className="flex flex-col gap-1 px-2 py-1">
-							<ImQuotesLeft className="text-9xl text-accent/20 leading-none mb-4" />
-							<div>
-								<h3 className="h3 mb-2">{slides[activeSlide].name}</h3>
-								<p className="mb-8 max-w-[360px]">
-									{slides[activeSlide].message}
-								</p>
-							</div>
-						</div>
-					</div> */}
 					{/* slider info & slider buttons*/}
-					<div className="w-max xl:w-[600px] flex flex-col justify-center items-center xl:items-start text-center xl:text-left mx-auto xl:mx-0">
+					<div className="w-full xl:w-[600px] flex flex-col items-center justify-center xl:items-start text-center xl:text-left mx-auto xl:mx-0">
 						<ImQuotesLeft className="text-9xl text-accent/20 leading-none mb-4" />
-						<div>
+						<div className="mx-auto">
 							<h3 className="h3 mb-2">{slides[activeSlide].name}</h3>
-							<p className="mb-8 max-w-[360px]">
+							<p className="mb-8 max-w-[360px] mx-auto">
 								{slides[activeSlide].message}
 							</p>
 						</div>
