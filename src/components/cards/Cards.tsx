@@ -6,7 +6,7 @@ import { SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si';
 // components
 import Card from './Card';
 
-const journey = [
+const journey: any = [
 	// experience
 	{
 		type: 'experience',
@@ -249,8 +249,8 @@ const Cards = () => {
 						transition={{ duration: 0.3 }}
 					>
 						{journey
-							.filter(item => item.type === 'experience')
-							.map((item, index) => (
+							.filter((item: { type: string }) => item?.type === 'experience')
+							.map((item: any, index: number) => (
 								<Card key={index} {...item} />
 							))}
 					</motion.div>
@@ -265,8 +265,8 @@ const Cards = () => {
 						transition={{ duration: 0.3 }}
 					>
 						{journey
-							.filter(item => item.type === 'education')
-							.map((item, index) => (
+							.filter((item: { type: string }) => item.type === 'education')
+							.map((item: any, index: number) => (
 								<Card key={index} {...item} />
 							))}
 					</motion.div>
@@ -281,8 +281,10 @@ const Cards = () => {
 						transition={{ duration: 0.3 }}
 					>
 						{journey
-							.filter(item => item.type === 'certification')
-							.map((item, index) => (
+							.filter(
+								(item: { type: string }) => item?.type === 'certification'
+							)
+							.map((item: any, index: number) => (
 								<Card key={index} {...item} />
 							))}
 					</motion.div>
@@ -297,8 +299,8 @@ const Cards = () => {
 						transition={{ duration: 0.3 }}
 					>
 						{journey
-							.filter(item => item.type === 'skill')
-							.map((item, index) => (
+							.filter((item: { type: string }) => item.type === 'skill')
+							.map((item: any, index: number) => (
 								<Card key={index} {...item} />
 							))}
 					</motion.div>

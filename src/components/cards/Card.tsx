@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
-interface Props {
+export interface Props {
 	key: number;
 	type: string;
 	company?: string;
