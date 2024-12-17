@@ -42,9 +42,8 @@
 	.textarea {
 		@apply resize-none p-[14px];
 	}
-  :root {
-
-		--radius: 0.5rem
+	:root {
+		--radius: 0.5rem;
 	}
 }
 
