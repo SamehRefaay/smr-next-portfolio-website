@@ -34,8 +34,8 @@ const Card = ({
 	certUrl,
 }: Props) => {
 	return (
-		<div className="w-full h-[300px] flex items-center top-12 sticky overflow-hidden">
-			<div className="w-full h-[270px] border border-accent/20 bg-[#f4ffff] rounded-lg">
+		<div className="w-full h-[400px] xl:h-[300px] flex items-center top-12 sticky overflow-hidden">
+			<div className="w-full h-[370px] xl:h-[270px] border border-accent/20 bg-[#f4ffff] rounded-lg">
 				<div className="flex flex-col h-full">
 					<div className="w-full h-[80px] xl:h-[68px] bg-white flex flex-col xl:flex-row justify-center xl:justify-between items-center px-6 md:px-20 rounded-t-lg">
 						<div className="flex gap-2">
@@ -114,8 +114,8 @@ const Card = ({
 									</div>
 								) : (
 									<p className="max-w-[660px] text-base">
-										{description && description.length > 380
-											? `${description.substring(0, 380)}...`
+										{description && description.length > 300
+											? `${description.substring(0, 300)}...`
 											: description}
 									</p>
 								)}

@@ -234,7 +234,7 @@ const Cards = () => {
 			defaultValue="experience"
 			className="w-full flex flex-col items-center"
 		>
-			<TabsList className="max-w-max mb-[30px]">
+			<TabsList className="max-w-max h-full mb-[30px] flex flex-col md:flex-row">
 				<TabsTrigger value="experience">Experience</TabsTrigger>
 				<TabsTrigger value="education">Education</TabsTrigger>
 				<TabsTrigger value="certification">Certifications</TabsTrigger>
