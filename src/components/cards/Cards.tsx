@@ -6,7 +6,7 @@ import { SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/si';
 // components
 import Card from './Card';
 
-const journey: any = [
+const journey: any[] = [
 	// experience
 	{
 		type: 'experience',

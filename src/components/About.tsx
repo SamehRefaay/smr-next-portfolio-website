@@ -70,22 +70,22 @@ const About = () => {
 							{/* item 1 */}
 							<div className="max-w-max">
 								<div className="uppercase font-bold text-primary">Age</div>
-								<p>35 Years</p>
+								<p className="text-sm">35 Years</p>
 							</div>
 							{/* item 2 */}
 							<div className="max-w-max">
 								<div className="uppercase font-bold text-primary">Born In</div>
-								<p>Cairo, Egypt</p>
+								<p className="text-sm">Cairo, Egypt</p>
 							</div>
 							{/* item 3 */}
 							<div className="max-w-max">
 								<div className="uppercase font-bold text-primary">Phone</div>
-								<p>+2 0111-7015-415</p>
+								<p className="text-sm">+2 0111-7015-415</p>
 							</div>
 							{/* item 4 */}
 							<div className="max-w-max">
 								<div className="uppercase font-bold text-primary">Email</div>
-								<p>samehrefaay89@gmail.com</p>
+								<p className="text-sm">samehrefaay89@gmail.com</p>
 							</div>
 						</div>
 					</div>
