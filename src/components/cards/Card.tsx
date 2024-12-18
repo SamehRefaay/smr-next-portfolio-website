@@ -45,7 +45,7 @@ const Card = ({
 								width={16}
 								height={16}
 							/>
-							<h3 className="text-lg text-primary font-semibold">
+							<h3 className="text-base xl:text-lg text-primary font-semibold">
 								{type === 'experience'
 									? position
 									: type === 'education' || type === 'certification'
@@ -68,7 +68,7 @@ const Card = ({
 									<div className="text-5xl text-primary/90">{icon}</div>
 								</div>
 							) : (
-								<div className="relative w-[280px] h-[80px] xl:h-[90px]">
+								<div className="relative w-[200px] h-[50px] xl:w-[280px] md:h-[80px] xl:h-[90px]">
 									{logoUrl && (
 										<Image
 											src={logoUrl}
@@ -113,9 +113,9 @@ const Card = ({
 										)}
 									</div>
 								) : (
-									<p className="max-w-[660px] text-base">
-										{description && description.length > 300
-											? `${description.substring(0, 300)}...`
+									<p className="max-w-[660px] text-sm xl:text-base">
+										{description && description.length > 260
+											? `${description.substring(0, 260)}...`
 											: description}
 									</p>
 								)}
