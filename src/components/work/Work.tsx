@@ -25,12 +25,12 @@ const data: workData[] = [
 		img: '/assets/work/thumb-02.png',
 		title: 'Admin Dashboard',
 	},
-	// {
-	// 	href: '',
-	// 	category: 'frontend',
-	// 	img: '/assets/work/thumb-3.png',
-	// 	title: 'Project three',
-	// },
+	{
+		href: 'https://cafe-bistro-ristorante.vercel.app/',
+		category: 'fullstack',
+		img: '/assets/work/thumb-06.jpg',
+		title: 'Bistro Restaurant Website with Admin Dashboard',
+	},
 	{
 		href: 'https://shopescap-e-commerce-website.vercel.app/',
 		category: 'fullstack',
@@ -61,34 +61,34 @@ const Work = () => {
 	const [tabValue, setTabValue] = useState('all');
 	const [visableItems, setVisableItems] = useState(6);
 
-	const uniqueCategories = Array.from(new Set(data.map(item => item.category)));
+	const uniqueCategories = Array.from(new Set(data.map((item) => item.category)));
 
 	const tabData: { category: string }[] = [
 		{ category: 'all' },
-		...uniqueCategories.map(item => ({ category: item })),
+		...uniqueCategories.map((item) => ({ category: item })),
 	];
 
 	//filiter work item based on tab category
 	const filiteredWork: workData[] =
 		tabValue === 'all'
-			? data.filter(item => item.category !== 'all')
-			: data.filter(item => item.category === tabValue);
+			? data.filter((item) => item.category !== 'all')
+			: data.filter((item) => item.category === tabValue);
 
 	// handle loading more items
-	const loadMoreItems = () => setVisableItems(prev => prev + 2);
+	const loadMoreItems = () => setVisableItems((prev) => prev + 2);
 
 	return (
-		<section className="py-24 min-h-[1000px]" id="work">
-			<div className="container mx-auto">
-				<Tabs defaultValue="all" className="w-full flex flex-col">
-					<div className="flex flex-col xl:flex-row items-center justify-center xl:justify-between">
-						<AnimatedText text="My Latest Work" textStyle="h2 mb-[30px]" />
-						<TabsList className="max-w-max h-full mb-[30px] flex flex-col md:flex-row ">
+		<section className='py-24 min-h-[1000px]' id='work'>
+			<div className='container mx-auto'>
+				<Tabs defaultValue='all' className='w-full flex flex-col'>
+					<div className='flex flex-col xl:flex-row items-center justify-center xl:justify-between'>
+						<AnimatedText text='My Latest Work' textStyle='h2 mb-[30px]' />
+						<TabsList className='max-w-max h-full mb-[30px] flex flex-col md:flex-row '>
 							{tabData.map((item, index) => (
 								<TabsTrigger
 									key={index}
 									value={item.category}
-									className="capitalize w-[120px]"
+									className='capitalize w-[120px]'
 									onClick={() => setTabValue(item.category)}
 								>
 									{item.category}
@@ -96,8 +96,8 @@ const Work = () => {
 							))}
 						</TabsList>
 					</div>
-					<TabsContent value={tabValue} className="w-full">
-						<div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-[30px]">
+					<TabsContent value={tabValue} className='w-full'>
+						<div className='w-full grid grid-cols-1 lg:grid-cols-3 gap-[30px]'>
 							<AnimatePresence>
 								{filiteredWork.slice(0, visableItems).map((item, index) => (
 									<motion.div
@@ -112,8 +112,8 @@ const Work = () => {
 							</AnimatePresence>
 						</div>
 						{visableItems < filiteredWork.length && (
-							<div className="flex justify-center mt-12">
-								<button onClick={loadMoreItems} className="btn btn-accent">
+							<div className='flex justify-center mt-12'>
+								<button onClick={loadMoreItems} className='btn btn-accent'>
 									Load More
 								</button>
 							</div>
